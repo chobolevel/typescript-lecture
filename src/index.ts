@@ -13,4 +13,13 @@ myTodoCollection.markComplete(3, true)
 
 
 console.log(`${myTodoCollection.userName}`)
-myTodoCollection.todoItems.forEach(item => item.printDetails())
+
+myTodoCollection.removeComplete()
+myTodoCollection.getTodoItems(true).forEach((item) => {
+    item.printDetails()
+})
+console.log('================================================')
+myTodoCollection.getTodoItems(false).forEach((item) => {
+    item.printDetails()
+})
+
